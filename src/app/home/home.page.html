@@ -1,171 +1,205 @@
-<ion-menu [type]="menuType" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-menu [type]="menuType" content-id="main-content">
+  <ion-content>
+    <ion-menu-toggle>
+      <ion-button>Click to close the menu</ion-button>
+    </ion-menu-toggle>
+  </ion-content>
   <ion-content class="ion-padding">This is the menu content.</ion-content>
 </ion-menu>
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title> Christmas </ion-title>
+    <ion-menu-toggle>
+      <ion-title>
+        <img
+          src="assets/icon/favicon.png"
+          alt="background ok"
+          height="20px"
+          width="20px"
+        />
+        Christmas
+      </ion-title>
+
+      <!-- <ion-button>Click </ion-button> -->
+    </ion-menu-toggle>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div class="ion-page" id="main-content">
+  <!-- <ion-content>
+    <br />
+    <br />
+    <br />
+    <br />
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Blank</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <ion-menu-toggle>
-    <ion-button>Click to open the menu</ion-button>
-  </ion-menu-toggle>
-  <ion-radio-group [(ngModel)]="menuType">
-    <ion-item>
-      <ion-radio value="overlay">
-        <code>overlay</code>
-      </ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-radio value="reveal">
-        <code>reveal</code>
-      </ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-radio value="push">
-        <code>push</code>
-      </ion-radio>
-    </ion-item>
-  </ion-radio-group>
-
-  <ion-button (click)="setOpen(true)">Open</ion-button>
-  <ion-action-sheet
-    [isOpen]="isActionSheetOpen"
-    header="Actions"
-    [buttons]="actionSheetButtons"
-    (didDismiss)="setOpen(false)"
-  ></ion-action-sheet>
-
-  <ion-accordion-group>
-    <ion-accordion value="first">
-      <ion-item slot="header" color="light">
-        <ion-label>First Accordion</ion-label>
+    <h2>Select an overlay type:</h2>
+    <ion-radio-group [(ngModel)]="menuType">
+      <ion-item>
+        <ion-radio value="overlay">
+          <code>overlay</code>
+        </ion-radio>
       </ion-item>
-      <div class="ion-padding" slot="content">First Content</div>
-    </ion-accordion>
-    <ion-accordion value="second">
-      <ion-item slot="header" color="light">
-        <ion-label>Second Accordion</ion-label>
+      <ion-item>
+        <ion-radio value="reveal">
+          <code>reveal</code>
+        </ion-radio>
       </ion-item>
-      <div class="ion-padding" slot="content">Second Content</div>
-    </ion-accordion>
-    <ion-accordion value="third">
-      <ion-item slot="header" color="light">
-        <ion-label>Third Accordion</ion-label>
+      <ion-item>
+        <ion-radio value="push">
+          <code>push</code>
+        </ion-radio>
       </ion-item>
-      <div class="ion-padding" slot="content">Third Content</div>
-    </ion-accordion>
-  </ion-accordion-group>
+    </ion-radio-group>
+    <br />
+    <ion-menu-toggle>
+      <ion-button>Click to open the menu</ion-button>
+    </ion-menu-toggle>
+    <br />
+    <ion-button (click)="setOpen(true)">Open</ion-button>
 
-  <ion-segment value="default">
-    <ion-segment-button value="default">
-      <ion-label>Default</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="segment">
-      <ion-label>Segment</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+    <ion-action-sheet
+      [isOpen]="isActionSheetOpen"
+      header="Actions"
+      [buttons]="actionSheetButtons"
+      (didDismiss)="setOpen(false)"
+    ></ion-action-sheet>
 
-  <ion-list>
-    <ion-item>
-      <ion-select label="Default label" placeholder="Favorite Fruit">
-        <ion-select-option value="apple">Apple</ion-select-option>
-        <ion-select-option value="banana">Banana</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>First Accordion</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">First Content</div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>Second Accordion</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Second Content</div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>Third Accordion</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Third Content</div>
+      </ion-accordion>
+    </ion-accordion-group>
 
-    <ion-item>
-      <ion-select
-        label="Fixed label"
-        label-placement="fixed"
-        placeholder="Favorite fruit"
-      >
-        <ion-select-option value="apple">Apple</ion-select-option>
-        <ion-select-option value="banana">Banana</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <ion-segment value="default">
+      <ion-segment-button value="default">
+        <ion-label>Default</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="segment">
+        <ion-label>Segment</ion-label>
+      </ion-segment-button>
+    </ion-segment>
 
-    <ion-item>
-      <ion-select label="Floating label" label-placement="floating">
-        <ion-select-option value="apple">Apple</ion-select-option>
-        <ion-select-option value="banana">Banana</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <ion-segment [scrollable]="true" value="heart">
-    <ion-segment-button value="home">
-      <ion-icon name="home"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="heart">
-      <ion-icon name="heart"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="pin">
-      <ion-icon name="pin"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="star">
-      <ion-icon name="star"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="call">
-      <ion-icon name="call"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="globe">
-      <ion-icon name="globe"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="basket">
-      <ion-icon name="basket"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="barbell">
-      <ion-icon name="barbell"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="trash">
-      <ion-icon name="trash"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="person">
-      <ion-icon name="person"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-  <ion-header>
-    <ion-toolbar>
-      <ion-segment value="all">
-        <ion-segment-button value="all">
-          <ion-label>All</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="favorites">
-          <ion-label>Favorites</ion-label>
-        </ion-segment-button>
-      </ion-segment>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
     <ion-list>
-      <ion-item *ngFor="let item of items; let index">
-        <ion-avatar slot="start">
-          <img
-            [src]="'https://picsum.photos/80/80?random=' + index"
-            alt="avatar"
-          />
-        </ion-avatar>
-        <ion-label>{{ item }}</ion-label>
+      <ion-item>
+        <ion-select label="Default label" placeholder="Favorite Fruit">
+          <ion-select-option value="apple">Apple</ion-select-option>
+          <ion-select-option value="banana">Banana</ion-select-option>
+          <ion-select-option value="orange">Orange</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select
+          label="Fixed label"
+          label-placement="fixed"
+          placeholder="Favorite fruit"
+        >
+          <ion-select-option value="apple">Apple</ion-select-option>
+          <ion-select-option value="banana">Banana</ion-select-option>
+          <ion-select-option value="orange">Orange</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select label="Floating label" label-placement="floating">
+          <ion-select-option value="apple">Apple</ion-select-option>
+          <ion-select-option value="banana">Banana</ion-select-option>
+          <ion-select-option value="orange">Orange</ion-select-option>
+        </ion-select>
       </ion-item>
     </ion-list>
-    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+    <ion-segment [scrollable]="true" value="heart">
+      <ion-segment-button value="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="heart">
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="pin">
+        <ion-icon name="pin"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="star">
+        <ion-icon name="star"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="call">
+        <ion-icon name="call"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="globe">
+        <ion-icon name="globe"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="basket">
+        <ion-icon name="basket"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="barbell">
+        <ion-icon name="barbell"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="trash">
+        <ion-icon name="trash"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="person">
+        <ion-icon name="person"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-content>
+      <ion-list>
+        <ion-item *ngFor="let item of items; let index">
+          <ion-avatar slot="start">
+            <img
+              [src]="'https://picsum.photos/80/80?random=' + index"
+              alt="avatar"
+            />
+          </ion-avatar>
+          <ion-label>{{ item }}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ion-content>
+  </ion-content> -->
+
+  <ion-content>
+    <br /><br /><br />
+
+    <ion-card>
+      <ion-card-header>
+        <img
+          src="assets/blt.jpg"
+          alt="background ok"
+          width="300"
+          height="300"
+        />
+        <ion-card-title>𝔭𝔢𝔯𝔥𝔞𝔭𝔰 Title</ion-card-title>
+        <ion-card-subtitle>𝔭𝔢𝔯𝔥𝔞𝔭𝔰 Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        𝔖𝔬 𝔭𝔢𝔯𝔥𝔞𝔭𝔰, 𝔶𝔬𝔲'𝔳𝔢 𝔤𝔢𝔫𝔢𝔯𝔞𝔱𝔢𝔡 𝔰𝔬𝔪𝔢 𝔣𝔞𝔫𝔠𝔶 𝔱𝔢𝔵𝔱, 𝔞𝔫𝔡 𝔶𝔬𝔲'𝔯𝔢 𝔠𝔬𝔫𝔱𝔢𝔫𝔱 𝔱𝔥𝔞𝔱
+        𝔶𝔬𝔲 𝔠𝔞𝔫 𝔫𝔬𝔴 𝔠𝔬𝔭𝔶 𝔞𝔫𝔡 𝔭𝔞𝔰𝔱𝔢 𝔶𝔬𝔲𝔯 𝔣𝔞𝔫𝔠𝔶 𝔱𝔢𝔵𝔱 𝔦𝔫 𝔱𝔥𝔢 𝔠𝔬𝔪𝔪𝔢𝔫𝔱𝔰 𝔰𝔢𝔠𝔱𝔦𝔬𝔫 𝔬𝔣
+        𝔣𝔲𝔫𝔫𝔶 𝔠𝔞𝔱 𝔳𝔦𝔡𝔢𝔬𝔰, 𝔟𝔲𝔱 𝔭𝔢𝔯𝔥𝔞𝔭𝔰 𝔶𝔬𝔲'𝔯𝔢 𝔴𝔬𝔫𝔡𝔢𝔯𝔦𝔫𝔤 𝔥𝔬𝔴 𝔦𝔱'𝔰 𝔢𝔳𝔢𝔫 𝔭𝔬𝔰𝔰𝔦𝔟𝔩𝔢 𝔱𝔬
+        𝔠𝔥𝔞𝔫𝔤𝔢 𝔱𝔥𝔢 𝔣𝔬𝔫𝔱 𝔬𝔣 𝔶𝔬𝔲𝔯 𝔱𝔢𝔵𝔱? ℑ𝔰 𝔦𝔱 𝔰𝔬𝔪𝔢 𝔰𝔬𝔯𝔱 𝔬𝔣 𝔥𝔞𝔠𝔨? 𝔄𝔯𝔢 𝔶𝔬𝔲 𝔠𝔬𝔭𝔶𝔦𝔫𝔤
+        𝔞𝔫𝔡 𝔭𝔞𝔰𝔱𝔦𝔫𝔤 𝔞𝔫 𝔞𝔠𝔱𝔲𝔞
+      </ion-card-content>
+    </ion-card>
   </ion-content>
-</ion-content>
+</div>

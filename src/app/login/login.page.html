@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login -new</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/blt.jpg" alt="background ok" width="300" height="100" />
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>𝔭𝔢𝔯𝔥𝔞𝔭𝔰 </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input placeholder="username"></ion-input>
+      </ion-item>
+      <br />
+      <ion-item>
+        <ion-input placeholder="password" type="password"></ion-input>
+      </ion-item>
+      <br />
+      <ion-button (click)="logMeIn()">login</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
