@@ -9,10 +9,10 @@
     <ion-card-header>
       <img src="assets/blt.jpg" alt="background ok" width="300" height="100" />
       <ion-card-subtitle></ion-card-subtitle>
-      <ion-card-title>𝔭𝔢𝔯𝔥𝔞𝔭𝔰 </ion-card-title>
+      <ion-card-title> </ion-card-title>
     </ion-card-header>
 
-    <ion-card-content>
+    <!-- <ion-card-content>
       <ion-item>
         <ion-input placeholder="username"></ion-input>
       </ion-item>
@@ -22,6 +22,54 @@
       </ion-item>
       <br />
       <ion-button (click)="logMeIn()">login</ion-button>
-    </ion-card-content>
+
+    </ion-card-content> -->
+    <div class="login-form">
+      <form #loginForm="ngForm" novalidate>
+        <ion-input
+          label="Username"
+          labelPlacement="stacked"
+          fill="solid"
+          [(ngModel)]="login.username"
+          name="username"
+          type="text"
+          #username="ngModel"
+          spellcheck="false"
+          autocapitalize="off"
+          errorText="Username is required"
+          required
+        >
+        </ion-input>
+
+        <ion-input
+          label="Password"
+          labelPlacement="stacked"
+          fill="solid"
+          [(ngModel)]="login.password"
+          name="password"
+          type="password"
+          #password="ngModel"
+          errorText="Password is required"
+          required
+        >
+        </ion-input>
+
+        <ion-row>
+          <ion-col>
+            <ion-button
+              (click)="onLogin(loginForm)"
+              type="submit"
+              expand="block"
+              >Login</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="onSignup()" color="light" expand="block"
+              >Signup</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
   </ion-card>
 </ion-content>

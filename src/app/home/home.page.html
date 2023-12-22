@@ -51,7 +51,11 @@
         𝔞𝔫𝔡 𝔭𝔞𝔰𝔱𝔦𝔫𝔤 𝔞𝔫 𝔞𝔠𝔱𝔲𝔞
       </ion-card-content>
     </ion-card>
-
+    <ion-content class="ion-padding">
+      <ion-nav-link (click)="openItem('efv')">
+        <ion-button>Go to Page Contact</ion-button>
+      </ion-nav-link>
+    </ion-content>
     <swiper-container pager>
       <swiper-slide *ngFor="let slide of slides">
         <img [src]="slide.image" class="slide-image" />

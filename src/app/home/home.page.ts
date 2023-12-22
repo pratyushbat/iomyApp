@@ -1,12 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController, InfiniteScrollCustomEvent } from '@ionic/angular';
+import {
+  AlertController,
+  InfiniteScrollCustomEvent,
+  NavController,
+} from '@ionic/angular';
+import { ContactPage } from '../angulario-pages/contact/contact.page';
+import { EventsPage } from '../angulario-pages/events/events.page';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  public pageContactComponent = EventsPage;
+
   menuType: string = 'overlay';
 
   items: string[] = [];
@@ -38,7 +46,15 @@ export class HomePage implements OnInit {
   setOpen(isOpen: boolean) {
     this.isActionSheetOpen = isOpen;
   }
-  constructor(private _router: Router, public alertCtrl: AlertController) {}
+  constructor(
+    private _router: Router,
+    public alertCtrl: AlertController,
+    public navCtrl: NavController
+  ) {}
+
+  public openItem(itemId: string): void {
+    this.navCtrl.navigateForward(['event-detail', itemId]);
+  }
   ngOnInit(): void {
     this.generateItems();
   }
