@@ -73,7 +73,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "1034231848111272865"
+        "hash": "18184051975137872211"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -94,6 +94,10 @@
       {
         "file": ".vscode/settings.json",
         "hash": "1151538777131426085"
+      },
+      {
+        "file": "README.md",
+        "hash": "13968141835662391186"
       },
       {
         "file": "android/.gitignore",
@@ -273,7 +277,7 @@
       },
       {
         "file": "android/build.gradle",
-        "hash": "15247024166514751308"
+        "hash": "3554236171214474333"
       },
       {
         "file": "android/capacitor.settings.gradle",
@@ -285,7 +289,7 @@
       },
       {
         "file": "android/gradle/wrapper/gradle-wrapper.properties",
-        "hash": "10340632815092109200"
+        "hash": "4759541775285973262"
       },
       {
         "file": "android/gradle.properties",
@@ -332,8 +336,80 @@
         "hash": "11019926542309931721"
       },
       {
+        "file": "src/app/angulario-pages/contact/contact-routing.module.ts",
+        "hash": "16910451730681593200"
+      },
+      {
+        "file": "src/app/angulario-pages/contact/contact.module.ts",
+        "hash": "12577520389966267710"
+      },
+      {
+        "file": "src/app/angulario-pages/contact/contact.page.html",
+        "hash": "2747462553812034085"
+      },
+      {
+        "file": "src/app/angulario-pages/contact/contact.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/angulario-pages/contact/contact.page.spec.ts",
+        "hash": "9352535564622900193"
+      },
+      {
+        "file": "src/app/angulario-pages/contact/contact.page.ts",
+        "hash": "3871779702562881142"
+      },
+      {
+        "file": "src/app/angulario-pages/events/event-detail/event-detail-routing.module.ts",
+        "hash": "2936292067107907870"
+      },
+      {
+        "file": "src/app/angulario-pages/events/event-detail/event-detail.module.ts",
+        "hash": "5246702175953122643"
+      },
+      {
+        "file": "src/app/angulario-pages/events/event-detail/event-detail.page.html",
+        "hash": "6597057722524206589"
+      },
+      {
+        "file": "src/app/angulario-pages/events/event-detail/event-detail.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/angulario-pages/events/event-detail/event-detail.page.spec.ts",
+        "hash": "8106324870406308777"
+      },
+      {
+        "file": "src/app/angulario-pages/events/event-detail/event-detail.page.ts",
+        "hash": "12753715325589460850"
+      },
+      {
+        "file": "src/app/angulario-pages/events/events-routing.module.ts",
+        "hash": "3699085361669998594"
+      },
+      {
+        "file": "src/app/angulario-pages/events/events.module.ts",
+        "hash": "12098276224098790594"
+      },
+      {
+        "file": "src/app/angulario-pages/events/events.page.html",
+        "hash": "719086612796266784"
+      },
+      {
+        "file": "src/app/angulario-pages/events/events.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/angulario-pages/events/events.page.spec.ts",
+        "hash": "6496923220172942971"
+      },
+      {
+        "file": "src/app/angulario-pages/events/events.page.ts",
+        "hash": "4312619488232592315"
+      },
+      {
         "file": "src/app/app-routing.module.ts",
-        "hash": "7092203362848417435"
+        "hash": "7795575723026329661"
       },
       {
         "file": "src/app/app.component.html",
@@ -353,7 +429,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "5073765293049625490"
+        "hash": "8175692973084381376"
       },
       {
         "file": "src/app/home/home-routing.module.ts",
@@ -365,7 +441,7 @@
       },
       {
         "file": "src/app/home/home.page.html",
-        "hash": "9385542315470902999"
+        "hash": "9345119556299706709"
       },
       {
         "file": "src/app/home/home.page.scss",
@@ -377,7 +453,83 @@
       },
       {
         "file": "src/app/home/home.page.ts",
-        "hash": "14016347339474948739"
+        "hash": "14043410245457909879"
+      },
+      {
+        "file": "src/app/login/login-routing.module.ts",
+        "hash": "15207053381291759772"
+      },
+      {
+        "file": "src/app/login/login.module.ts",
+        "hash": "17712010613817365668"
+      },
+      {
+        "file": "src/app/login/login.page.html",
+        "hash": "15244925431230699540"
+      },
+      {
+        "file": "src/app/login/login.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/login/login.page.spec.ts",
+        "hash": "11622843872418222859"
+      },
+      {
+        "file": "src/app/login/login.page.ts",
+        "hash": "15634961178942072720"
+      },
+      {
+        "file": "src/app/models/event.model.ts",
+        "hash": "13272691111351883424"
+      },
+      {
+        "file": "src/app/models/user.model.ts",
+        "hash": "3594571033477216493"
+      },
+      {
+        "file": "src/app/providers/github-events/github-events.ts",
+        "hash": "8636077815705803496"
+      },
+      {
+        "file": "src/app/providers/github-orgs/github-orgs.ts",
+        "hash": "8405854112579301648"
+      },
+      {
+        "file": "src/app/providers/github-repos/github-repos.ts",
+        "hash": "15072143071804805745"
+      },
+      {
+        "file": "src/app/providers/github-users/github-users.ts",
+        "hash": "16075343086626684265"
+      },
+      {
+        "file": "src/app/test/test-routing.module.ts",
+        "hash": "37300803184800571"
+      },
+      {
+        "file": "src/app/test/test.module.ts",
+        "hash": "17527509539341898249"
+      },
+      {
+        "file": "src/app/test/test.page.html",
+        "hash": "1608465550545974366"
+      },
+      {
+        "file": "src/app/test/test.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/test/test.page.spec.ts",
+        "hash": "14312145627850457006"
+      },
+      {
+        "file": "src/app/test/test.page.ts",
+        "hash": "15901050187107027496"
+      },
+      {
+        "file": "src/assets/blt.jpg",
+        "hash": "16504598875183446375"
       },
       {
         "file": "src/assets/icon/favicon.png",

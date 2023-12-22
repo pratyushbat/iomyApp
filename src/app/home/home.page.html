@@ -5,6 +5,9 @@
     </ion-menu-toggle>
   </ion-content>
   <ion-content class="ion-padding">This is the menu content.</ion-content>
+  <ion-button (click)="routeTo('remote')">Remote Page</ion-button>
+  <ion-button (click)="routeTo('contact')">Contact Page</ion-button>
+  <ion-button (click)="routeTo('events')">Event Page</ion-button>
 </ion-menu>
 <ion-header>
   <ion-toolbar>
@@ -25,159 +28,6 @@
 </ion-header>
 
 <div class="ion-page" id="main-content">
-  <!-- <ion-content>
-    <br />
-    <br />
-    <br />
-    <br />
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <h2>Select an overlay type:</h2>
-    <ion-radio-group [(ngModel)]="menuType">
-      <ion-item>
-        <ion-radio value="overlay">
-          <code>overlay</code>
-        </ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-radio value="reveal">
-          <code>reveal</code>
-        </ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-radio value="push">
-          <code>push</code>
-        </ion-radio>
-      </ion-item>
-    </ion-radio-group>
-    <br />
-    <ion-menu-toggle>
-      <ion-button>Click to open the menu</ion-button>
-    </ion-menu-toggle>
-    <br />
-    <ion-button (click)="setOpen(true)">Open</ion-button>
-
-    <ion-action-sheet
-      [isOpen]="isActionSheetOpen"
-      header="Actions"
-      [buttons]="actionSheetButtons"
-      (didDismiss)="setOpen(false)"
-    ></ion-action-sheet>
-
-    <ion-accordion-group>
-      <ion-accordion value="first">
-        <ion-item slot="header" color="light">
-          <ion-label>First Accordion</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">First Content</div>
-      </ion-accordion>
-      <ion-accordion value="second">
-        <ion-item slot="header" color="light">
-          <ion-label>Second Accordion</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">Second Content</div>
-      </ion-accordion>
-      <ion-accordion value="third">
-        <ion-item slot="header" color="light">
-          <ion-label>Third Accordion</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">Third Content</div>
-      </ion-accordion>
-    </ion-accordion-group>
-
-    <ion-segment value="default">
-      <ion-segment-button value="default">
-        <ion-label>Default</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="segment">
-        <ion-label>Segment</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-
-    <ion-list>
-      <ion-item>
-        <ion-select label="Default label" placeholder="Favorite Fruit">
-          <ion-select-option value="apple">Apple</ion-select-option>
-          <ion-select-option value="banana">Banana</ion-select-option>
-          <ion-select-option value="orange">Orange</ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-select
-          label="Fixed label"
-          label-placement="fixed"
-          placeholder="Favorite fruit"
-        >
-          <ion-select-option value="apple">Apple</ion-select-option>
-          <ion-select-option value="banana">Banana</ion-select-option>
-          <ion-select-option value="orange">Orange</ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-select label="Floating label" label-placement="floating">
-          <ion-select-option value="apple">Apple</ion-select-option>
-          <ion-select-option value="banana">Banana</ion-select-option>
-          <ion-select-option value="orange">Orange</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
-    <ion-segment [scrollable]="true" value="heart">
-      <ion-segment-button value="home">
-        <ion-icon name="home"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="heart">
-        <ion-icon name="heart"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="pin">
-        <ion-icon name="pin"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="star">
-        <ion-icon name="star"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="call">
-        <ion-icon name="call"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="globe">
-        <ion-icon name="globe"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="basket">
-        <ion-icon name="basket"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="barbell">
-        <ion-icon name="barbell"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="trash">
-        <ion-icon name="trash"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="person">
-        <ion-icon name="person"></ion-icon>
-      </ion-segment-button>
-    </ion-segment>
-
-    <ion-content>
-      <ion-list>
-        <ion-item *ngFor="let item of items; let index">
-          <ion-avatar slot="start">
-            <img
-              [src]="'https://picsum.photos/80/80?random=' + index"
-              alt="avatar"
-            />
-          </ion-avatar>
-          <ion-label>{{ item }}</ion-label>
-        </ion-item>
-      </ion-list>
-      <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
-        <ion-infinite-scroll-content></ion-infinite-scroll-content>
-      </ion-infinite-scroll>
-    </ion-content>
-  </ion-content> -->
-
   <ion-content>
     <br /><br /><br />
 
@@ -201,5 +51,21 @@
         𝔞𝔫𝔡 𝔭𝔞𝔰𝔱𝔦𝔫𝔤 𝔞𝔫 𝔞𝔠𝔱𝔲𝔞
       </ion-card-content>
     </ion-card>
+
+    <swiper-container pager>
+      <swiper-slide *ngFor="let slide of slides">
+        <img [src]="slide.image" class="slide-image" />
+        <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+        <p [innerHTML]="slide.description"></p>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-toolbar> </ion-toolbar>
+        <img src="assets/ica-slidebox-img-4.png" class="slide-image" />
+        <h2 class="slide-title">Use the menu to visit all the pages.</h2>
+        <button ion-button outline (click)="showImpression()">
+          First impression
+        </button>
+      </swiper-slide>
+    </swiper-container>
   </ion-content>
 </div>

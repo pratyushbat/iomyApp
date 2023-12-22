@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>test</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br />
+  <br />
+  <br />
+  <br />
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button (click)="routeTo()">Go Back to Home Page</ion-button>
+  <h2>Select an overlay type:</h2>
+  <ion-radio-group [(ngModel)]="menuType">
+    <ion-item>
+      <ion-radio value="overlay">
+        <code>overlay</code>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="reveal">
+        <code>reveal</code>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="push">
+        <code>push</code>
+      </ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  <br />
+  <ion-menu-toggle>
+    <ion-button>Click to open the menu</ion-button>
+  </ion-menu-toggle>
+  <br />
+  <ion-button (click)="setOpen(true)">Open</ion-button>
+
+  <ion-action-sheet
+    [isOpen]="isActionSheetOpen"
+    header="Actions"
+    [buttons]="actionSheetButtons"
+    (didDismiss)="setOpen(false)"
+  ></ion-action-sheet>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>First Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">First Content</div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Second Content</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Third Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Third Content</div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-segment value="default">
+    <ion-segment-button value="default">
+      <ion-label>Default</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>
